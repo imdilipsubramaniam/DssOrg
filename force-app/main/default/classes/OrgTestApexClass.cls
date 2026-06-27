@@ -1,6 +1,6 @@
 public with sharing class OrgTestApexClass {
     public static void testMethodName() {
-        System.debug('Org test running');
+        System.debug('Org test running hello');
     }
 
     public static Map<String,List<String>> generateStageNameMap(){
@@ -24,5 +24,5 @@ public with sharing class OrgTestApexClass {
         
     }
 
-    
+
 }
