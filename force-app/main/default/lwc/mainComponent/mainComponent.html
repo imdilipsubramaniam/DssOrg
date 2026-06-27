@@ -1,0 +1,13 @@
+<template>
+    <lightning-card class="slds-m-around_small" title="Composition">
+        <div class = "slds-p-around_large" >
+            Main Component<br>
+        <c-child-component product-list = {productList}></c-child-component>
+        </div>
+        
+    </lightning-card>   
+
+    <lightning-button variant="brand" label="Click" class="slds-m-left_small" onclick={handleClick}></lightning-button>
+    
+
+</template>

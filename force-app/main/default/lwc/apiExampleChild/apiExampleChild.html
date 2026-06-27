@@ -1,0 +1,14 @@
+<template>
+       <lightning-card>
+        
+        <p>Child property 1 : {childProperty1}</p>
+         <p>Child property 2 : {childProperty2}</p>
+         </lightning-card> 
+         <!-- this is like calling the child method from child itself
+         <lightning-button  label="Call child method" onclick={callChildMethod}></lightning-button> -->
+         <lightning-card> 
+         <lightning-input class="slds-p-left_small" label="Enter message to parent" data-id="child"></lightning-input>
+         <lightning-button class="slds-p-left_small" label="Send message to parent" onclick={sendMessageToParent}></lightning-button>
+         </lightning-card> 
+       
+</template>

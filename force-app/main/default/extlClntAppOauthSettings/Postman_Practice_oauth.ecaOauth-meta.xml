@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <commaSeparatedOauthScopes>Basic, Api, Full, RefreshToken</commaSeparatedOauthScopes>
+    <externalClientApplication>Postman_Practice</externalClientApplication>
+    <isFirstPartyAppEnabled>false</isFirstPartyAppEnabled>
+    <label>Postman_Practice_oauth</label>
+    <oauthLink>00DWU00000N70PR:888WU000001F3Mn</oauthLink>
+</ExtlClntAppOauthSettings>

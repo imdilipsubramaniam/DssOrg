@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>BILLSHARING_WITH_USA_AND_SALES</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>BILLSHARING WITH USA  AND SALES</label>
+        <sharedTo>
+            <role>CIO</role>
+        </sharedTo>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>BillingCountry</field>
+            <operation>contains</operation>
+            <value>USA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Segment__c</field>
+            <operation>equals</operation>
+            <value>pharma</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Digital_manager_to_Manager_sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>account sharing rule between digital manager to manager</description>
+        <label>Digital manager to Manager sharing</label>
+        <sharedTo>
+            <role>Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Digital_Manager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,14 @@
+<template>
+    <p>Parent component</p>
+    <c-variable-understanding name-var='LWC'></c-variable-understanding>
+
+    <div class="slds-card">
+        <p>List of Names</p>
+    </div>
+
+    <div class = 'slds-card'>
+        <template for:each={listOfNames} for:item="name">
+            <p key={name}> Name is {name}</p>
+        </template>
+    </div>
+</template>

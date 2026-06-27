@@ -1,0 +1,12 @@
+<template>
+    <lightning-input type="text" label="Enter records to display" onkeyup={setCount} >
+    </lightning-input>
+
+    <template for:each={recordsToDisplay} for:item="record">
+        <lightning-card key={record.Id}>
+            <p>{record.Id}</p>
+            <p>{record.Name}</p>
+            <p>{record.AnnualRevenue}</p>
+        </lightning-card>
+    </template>
+</template>

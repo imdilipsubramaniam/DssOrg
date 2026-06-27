@@ -1,0 +1,18 @@
+<template>
+    <div>
+        <lightning-card class="slds-p-around_medium" title="Contact Display">
+            <lightning-input class="slds-m-around_medium" label="Enter the contact details" value={searchKey} onchange={handleSearchChange}></lightning-input>
+            
+            <div class="slds-m-around_medium">
+                <template for:each = {filteredContactRecords} for:item = 'contact'>
+                    <p key={contact.Id} class="slds-col slds-size_1-of-2 slds-box slds-p-around_medium slds-m-around_small">
+                        <strong>Name : {contact.Name}</strong><br>
+                        Email : {contact.Email}<br>
+                        Phone : {contact.Phone}
+                    </p>
+                </template>
+            </div>
+             
+        </lightning-card>
+    </div>
+</template>

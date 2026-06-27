@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_date_check</fullName>
+    <active>true</active>
+    <description>End date must not be less than Start date</description>
+    <errorConditionFormula>End_date__c  &lt;  Start_date__c</errorConditionFormula>
+    <errorDisplayField>End_date__c</errorDisplayField>
+    <errorMessage>Enter valid date</errorMessage>
+</ValidationRule>

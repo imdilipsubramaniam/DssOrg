@@ -1,0 +1,16 @@
+<template>
+    <p>This is a child Reactivity component check</p>
+    <p>user Details from child</p>
+    <p>{userDetails}</p>
+
+    <template for:each={userDetails} for:item="user">
+        <p key ={user.userId}>{user.userId}</p>
+        <p key ={user.userId}>{user.name.firstName}</p>
+        <p key ={user.userId}>{user.contact.phone}</p>
+        <p key ={user.userId}>{user.employment.company}</p>
+        <template for:each={user.activityLog} for:item="activity">
+            <p key={activity.timestamp}>{activity.timestamp} and {activity.action}</p>
+        </template>
+        
+    </template>
+</template>

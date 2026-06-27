@@ -1,0 +1,22 @@
+<template>
+    <lightning-card class="slds-m-around_medium">
+        <h3 slot="title">Zodiac Messengers</h3>
+        <div class="slds-m-around_medium">
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" value={name} onchange={handleNameChange} label="Enter your Name" name="name" placeholder="name" required></lightning-input>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="date" value={dob} onchange={handleDobChange} label="Enter your DOB" placeholder="mm-dd" name="dob" required></lightning-input>
+                </div>
+                <div class="slds-p-around_medium lgc-bg slds-text-align_center">
+                    <lightning-button variant="brand" label="Check You Sign" title="Primary action" onclick={handleClick}
+                    class="slds-m-left_x-small"></lightning-button>
+                </div>
+                
+
+            </div>
+        </div>
+    </lightning-card>
+
+</template>

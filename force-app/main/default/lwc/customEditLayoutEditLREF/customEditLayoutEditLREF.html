@@ -1,0 +1,33 @@
+<template>
+    <lightning-card class = 'slds-m-around_medium' title='LREF demo'>
+        <lightning-record-edit-form
+          density="compact"
+          object-api-name={objectApiName}
+          record-id={recordId}
+          onsuccess={handleSuccess}
+          onerror={handleError}
+        >
+        <lightning-messages></lightning-messages>
+        <div class ='slds-grid slds-wrap'>
+            <div class='slds-col slds-size_1-of-2'>
+                <lightning-input-field field-name ='Name'></lightning-input-field>
+            </div>
+            <div class='slds-col slds-size_1-of-2'>
+                <lightning-input-field field-name ='AccountNumber'></lightning-input-field>
+            </div>
+            <div class='slds-col slds-size_1-of-2'>
+                <lightning-input-field field-name ='AnnualRevenue'></lightning-input-field>
+            </div>
+            <div class='slds-col slds-size_1-of-2'>
+                <lightning-input-field field-name ='Rating'></lightning-input-field>
+            </div>
+            <div class='slds-col slds-size_1-of-2'>
+                <lightning-input-field field-name ='SLA__c'></lightning-input-field>
+            </div>
+            
+            
+        </div>
+          <lightning-button class ='slds-m-top_small' type='submit' label='Save' variant = 'brand'></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

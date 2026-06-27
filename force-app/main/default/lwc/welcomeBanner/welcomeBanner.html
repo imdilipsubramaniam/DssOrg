@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-input
+            label="First Name"
+            name="firstName"
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input
+            label="Last Name"
+            name="lastName"
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input
+            label="Uppercased Name"
+            value={upperCasedName}
+            disabled>
+        </lightning-input>
+    </div>
+</template>

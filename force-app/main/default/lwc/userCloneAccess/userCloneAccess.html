@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Clone User Access">
+
+        <!-- SOURCE USER -->
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                label="Source User"
+                value={sourceUserId}
+                options={userOptions}
+                onchange={handleSourceUserChange}>
+            </lightning-combobox>
+        </div>
+
+        <!-- ACCESS PREVIEW -->
+        <template if:true={accessLoaded}>
+            <div class="slds-p-around_medium">
+                <p><strong>Permission Sets:</strong> {psCount}</p>
+                <p><strong>Permission Set Groups:</strong> {psgCount}</p>
+
+                <lightning-input
+                    type="checkbox"
+                    label="Clone Permission Sets"
+                    checked={clonePS}
+                    onchange={handleClonePS}>
+                </lightning-input>
+
+                <lightning-input
+                    type="checkbox"
+                    label="Clone Permission Set Groups"
+                    checked={clonePSG}
+                    onchange={handleClonePSG}>
+                </lightning-input>
+            </div>
+        </template>
+
+        <!-- NEW USER FORM -->
+        <div class="slds-p-around_medium">
+            <lightning-input label="First Name"  value={firstName} onchange={handleFirstName}></lightning-input>
+            <lightning-input label="Last Name" required value={lastName} onchange={handleLastName}></lightning-input>
+            <lightning-input label="Email" type="email" value={email} required onchange={handleEmail}></lightning-input>
+            <lightning-input label="Username" required value={username} onchange={handleUsername}></lightning-input>
+            <lightning-input label="Alias" required value={alias} onchange={handleAlias}></lightning-input>
+            <!--lightning-input label="Community Nickname" onchange={handleNickname}></!--lightning-input-->
+        </div>
+
+        <!-- ACTION -->
+        <div class="slds-p-around_medium">
+            <lightning-button
+                label="Create User and Clone Access"
+                variant="brand"
+                onclick={handleSubmit}>
+            </lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

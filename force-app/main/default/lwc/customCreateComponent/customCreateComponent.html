@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Create component without LDS" class ='slds-m-around_medium'>
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" label="Subject" placeholder="enter subject" onchange={handleSubjectChange} value ={subject}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <lightning-textarea name="input3" label="Description" placeholder="description here..." onchange={handleDescriptionChange} value ={description}></lightning-textarea> 
+        </div>
+        <lightning-combobox
+            name="Priority"
+            label="Priority"
+            placeholder="Select Priority"
+            options={priorityOptions}
+            onchange={handlePriorityChange} 
+            value={priorityValue}>
+        </lightning-combobox>
+        <lightning-combobox
+            name="Status"
+            label="Status"
+            placeholder="Select Status"
+            options={statusOptions}
+            onchange={handleStatusChange} 
+            value = {statusValue}>
+        </lightning-combobox>
+        
+        <lightning-button variant="brand" label ="Create Case" onclick={handleCreate}></lightning-button>
+        <lightning-button variant="outline" label ='reset' onclick={handleReset}></lightning-button>
+        
+    </lightning-card>
+</template>

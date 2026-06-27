@@ -1,0 +1,10 @@
+<template>
+    Child Component
+    <template for:each={productList} for:item="product">
+        <p key ={product.id}>{product.name} and {product.price}</p>
+    </template>
+
+    <p lwc:if={showDetails}>
+        Show this line when the parent button is clicked
+    </p>
+</template>

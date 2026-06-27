@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title = "Reactivity Component">
+        <div class ="slds-m-around_medium">
+            <div class="slds-p-around_medium">
+                <p>{userAddress}</p>
+                <lightning-button label="Change Address" onclick={handleClick}></lightning-button>
+            </div><br>
+            <div class="slds-p-around_medium">
+                <lightning-input label="Enter Address" onchange={handleChange}></lightning-input>
+                
+            </div>
+
+            <c-reactivity-child user-details={userDetails}></c-reactivity-child>
+
+            <img src={src} alt ="pic"></img>
+                     
+        </div>
+    </lightning-card>
+</template>

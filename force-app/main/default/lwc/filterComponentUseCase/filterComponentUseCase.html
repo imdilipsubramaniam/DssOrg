@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Search Filter Component" class="slds-m-around_medium">
+        <div class="slds-p-around_small slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                <lightning-input label="Filter" onchange={changeFilter} placeholder="Enter text"></lightning-input>
+
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                <lightning-combobox label="Category" options={categoryOptions}
+                    onchange={changeCategory}></lightning-combobox>
+
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                <lightning-combobox label="Sort" options={sortOptions} onchange={changeSort}></lightning-combobox>
+
+            </div>
+
+            <lightning-datatable
+                key-field="id"
+                data={filteredData}
+                columns={columns} hide-checkbox-column>
+            </lightning-datatable>
+
+        </div>
+
+    </lightning-card>
+</template>

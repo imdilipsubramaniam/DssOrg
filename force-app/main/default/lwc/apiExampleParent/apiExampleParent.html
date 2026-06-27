@@ -1,0 +1,11 @@
+<template>
+     <lightning-input value="">  </lightning-input>
+    <lightning-button label="Set value" onclick={setValue}></lightning-button>
+    <c-api-example-child child-property1 ="Hello world" onsend={storeMessage}></c-api-example-child>
+    <lightning-button label="Empty the object" onclick={emptyChildProperty}></lightning-button>
+    
+    <lightning-card title="Message from Child">
+    <p class="slds-p-left_small">{childMessage}</p>
+    </lightning-card>
+     
+</template>

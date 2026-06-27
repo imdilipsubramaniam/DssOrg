@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title='Imperative Case Origin Record Creation' class='slds-m-around_medium slds-p-around_medium'>
+        <div class="slds-m-around_medium">
+            <lightning-combobox name='Origin' label='Select Case Origin' options={caseOptions}
+                onchange={handleOriginChange}></lightning-combobox>
+            <div class="slds-m-top_medium">
+                <lightning-button variant="brand" label="Fetch Case"
+                    onclick={imperativeCaseCreation}></lightning-button>
+
+            </div>
+
+            <template if:true={showTable}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_medium">
+                    <thead>
+                        <tr>
+                            <th>Case Number</th>
+                            <th>Origin</th>
+                            <th>Subject</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={caseDetails} for:item="caseRec">
+                            <tr key={caseRec.Id}>
+                                <td>{caseRec.CaseNumber}</td>
+                                <td>{caseRec.Origin}</td>
+                                <td>{caseRec.Subject}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+
+
+            </template>
+        </div>
+
+    </lightning-card>
+</template>

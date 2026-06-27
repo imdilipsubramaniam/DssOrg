@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title='Case Origin Record' class='slds-m-around_medium slds-p-around_medium'>
+
+        <lightning-combobox name='Origin' label='Select Case Origing' options={caseOptions} onchange={handleOriginChange}></lightning-combobox>
+
+        <template if:true ={caseDetails}>
+            <template for:each={caseDetails} for:item="caseRec">
+                <li class ="slds-m-left_small slds-m-bottom_small slds-p-left_medium" key={caseRec.Id}> {caseRec.CaseNumber}  {caseRec.Origin}  {caseRec.Subject}</li>
+
+            </template>
+        </template>
+
+    </lightning-card>
+</template>

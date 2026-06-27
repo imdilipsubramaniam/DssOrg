@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <lightning-card class="slds-p-around_medium" title="Getter">
+            <p class="slds-p-around_medium">{handlegetterProperty}</p>
+        </lightning-card>
+    </div>
+
+    <div>
+        <lightning-card class="slds-p-around_medium" title="Getter and Setters">
+            <p class="slds-p-around_medium">{handleGetterSetter}</p>
+        <lightning-input class="slds-p-around_medium slds-box" label="enter a number" type="number" onchange={handleGetterSetterChange}></lightning-input>
+        <p class="slds-p-around_medium">{handleGetterSetter}</p>
+        </lightning-card>
+    </div>
+    
+</template>

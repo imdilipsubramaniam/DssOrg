@@ -1,0 +1,42 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon>
+            Task List for Dilip!
+        </h3>
+        <div slot="footer">
+            <lightning-badge label="Task completion is important"></lightning-badge>
+        </div>
+        <div class="slds-m-around_medium">
+            <template for:each={taskList} for:item="task">
+                <p key={task.taskId}>Task Name :{task.taskName} Task Priority :{task.taskPriority} Task Status :{task.taskStatus}</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card class="slds-m-around_medium">
+        <div  class="slds-m-around_medium">
+
+            <template iterator:task={taskList}>
+
+                <template if:true={task.first}>
+                    <p key={task.value.taskId}>
+                        <b><i>{task.value.taskName}</i></b>
+                    </p>
+                </template>
+
+                
+                <p key={task.value.taskId}>
+                    {task.value.taskName}   {task.value.taskPriority}
+                </p>
+                
+
+                <template if:true={task.last}>
+                    <p key={task.value.taskId}>
+                        <b><u>{task.value.taskName}</u></b>
+                    </p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Dependent Wire Component" class="slds-m-around_medium slds-p-around_medium">
+        <p class="slds-p-left_small">Tasks Associated with {accountName}</p>
+        <div class='slds-m-around_medium slds-table slds-table_bordered slds-table_cell-buffer' >
+            <template if:true={taskExist}>
+                <table>
+                    <thead>
+                        <tr>
+                            
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th>ActivityDate </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={taskList} for:item="task">
+                            <tr key={task.Id}>
+                                
+                                <td>{task.Subject}</td>
+                                <td>{task.Status}</td>
+                                <td>{task.Priority}</td>
+                                <td>{task.ActivityDate }</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sla_rating_check</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL( Rating , &quot;Warm&quot;),
+ OR(ISPICKVAL( SLA__c ,&quot;Platinum&quot;),
+ISPICKVAL( SLA__c ,&quot;Bronze&quot;))
+)</errorConditionFormula>
+    <errorMessage>Cannot have SLA as platinum or bronze when rating is Warm</errorMessage>
+</ValidationRule>
